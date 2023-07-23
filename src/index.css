@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800&display=swap");
+/* index.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* El resto de tus estilos */
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cc0000;
+}
+
+body {
+  background: #000;
+  color: white;
+}
+
+.borde {
+  border: 1px solid red;
+}
+
+.link:hover {
+  transition: all 500ms;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #ff0000;
+}
+
+@media screen and (min-width: 768px) {
+  .subtitle {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align: center;
+    color: white;
+    font-size: 24px; /* Tamaño de la fuente, ajusta según tus necesidades */
+    line-height: 1.2; /* Espaciado entre líneas, ajusta según tus necesidades */
+  }
+}
