@@ -5,6 +5,7 @@ export default {
     colors: {
       blackj: "#000",
       redj: "#FF0000",
+      redj2: "rgba(238, 29, 26, 0.70);",
       redjl: "#EE1D1A",
       white: "#FFF",
       placeholder: "#373737",

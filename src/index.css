@@ -9,6 +9,8 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-weight: bold;
+  /* -webkit-font-smoothing: antialiased; */
 }
 
 ::-webkit-scrollbar {
@@ -32,6 +34,10 @@ body {
   border: 1px solid red;
 }
 
+.bgRed {
+  background-color: rgba(238, 29, 26, 0.7);
+}
+
 .link:hover {
   transition: all 500ms;
   cursor: pointer;
@@ -48,4 +54,32 @@ body {
     font-size: 24px; /* Tamaño de la fuente, ajusta según tus necesidades */
     line-height: 1.2; /* Espaciado entre líneas, ajusta según tus necesidades */
   }
+}
+
+.parallax {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  white-space: nowrap;
+  /* display: flex; */
+  display: inline-block;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: 30px;
 }

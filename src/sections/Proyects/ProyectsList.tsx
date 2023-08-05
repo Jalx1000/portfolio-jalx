@@ -1,6 +1,7 @@
 import { ProyectConfig } from "../../type/ProyectType";
-import { Proyect } from "./Proyect";
-import { useState } from "react";
+// import { Proyect } from "./Proyect";
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const Proyects = [
   {
@@ -92,26 +93,47 @@ const Proyects = [
 
 const ProyectsList = () => {
   const [selectedId, setSelectedId] = useState(null);
+  // const constraintsRef = useRef(null);
 
   return (
     <section>
       <article className="">
         <div>
           <p>PROYECTOS</p>
-          <div className="flex flex-col justify-center items-center md:flex-row">
+          <motion.div
+            drag="x"
+            dragConstraints={{ left: -1000, right: 0 }}
+            className="flex flex-col justify-center items-center md:flex-row"
+          >
             {Proyects.map((proyect: ProyectConfig) => {
               return (
-                <Proyect
-                  id={proyect.id}
-                  title={proyect.title}
-                  description={proyect.description}
-                  image={proyect.image}
-                  route={proyect.route}
-                  stacks={proyect.stacks}
-                />
+                <motion.div
+                  key={proyect.id}
+                  // onClick={() => setSelectedId(item.id)
+                  className="relative flex flex-col items-center w-[90%] mr-5 left-52"
+                >
+                  <img
+                    className="w-[100%]"
+                    src={proyect.image.src}
+                    alt={proyect.image.alt}
+                  />{" "}
+                  <div className="opacity-0 hover:opacity-100 hover:duration-300 absolute bottom-2.5 px-5">
+                    <motion.h3 className="text-xl">
+                      {proyect.title}
+                    </motion.h3>
+                    <motion.p className="my-2 text-justify line-clamp-3">
+                      {proyect.description}
+                    </motion.p>
+                    <motion.button>
+                      <a className="link" href={proyect.route}>
+                        Ver mas
+                      </a>
+                    </motion.button>
+                  </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </article>
     </section>
