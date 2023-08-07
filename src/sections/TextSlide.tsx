@@ -1,4 +1,3 @@
-import circle from "../assets/circle1.svg";
 import { useRef } from "react";
 import {
   motion,
@@ -32,7 +31,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
   const directionFactor = useRef<number>(1);
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;

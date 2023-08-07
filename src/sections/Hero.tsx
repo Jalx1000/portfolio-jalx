@@ -5,7 +5,7 @@ import arrow from "../assets/arrow.svg";
 const Hero = () => {
   return (
     <div className="h-screen">
-      <div className="absolute top-0 right-0 w-0 md:w-96 bgRed xl:w-[40%] h-screen -z-10">
+      <div className="absolute top-0 right-0 w-0 md:w-96 bgRed xl:w-[40%] 2xl:w-[30%] h-screen -z-10">
         <img
           className="absolute bg-image bg-no-repeat bg-cover bottom-0 "
           src={person}

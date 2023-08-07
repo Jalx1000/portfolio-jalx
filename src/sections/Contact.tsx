@@ -1,6 +1,20 @@
 import boxSvg from "../assets/box.svg";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.currentTarget,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <section className="my-36 ">
       <img className="absolute -right-36 -mt-80 -z-30 " src={boxSvg} alt="" />
@@ -10,9 +24,6 @@ const Contact = () => {
           <h2 className="subtitle text-white  hidden absolute left-3 sm:block md:mt-36 md:text-4xl xl:left-10 xl:text-4x xl:mt-16">
             CONTACTAME
           </h2>
-          {/* <h2 className="sm:hidden  my-4 text-white  text-4xl">
-            CONTACTAME
-          </h2> */}
         </div>
 
         <div className="xl:flex ">
@@ -27,7 +38,7 @@ const Contact = () => {
           </div>
 
           <article className="m-auto md:m-0 w-[100%] xl:w-[449px] mt-5">
-            <form className="" action="">
+            <form onSubmit={sendEmail}>
               <div className="flex flex-col">
                 <label className="text-2xl md:text-4xl " htmlFor="">
                   Nombre
@@ -35,7 +46,8 @@ const Contact = () => {
                 <input
                   className="outline-none h-10 pl-2 placeholder:text-placeholder text-placeholder focus:placeholder:text-opacity-0"
                   type="text"
-                  placeholder="Javier Alejandro Mogro Peñafiel"
+                  placeholder="Nombre"
+                  name="user_name"
                 />
               </div>
               <div className="flex flex-col my-5">
@@ -44,8 +56,9 @@ const Contact = () => {
                 </label>
                 <input
                   className="outline-none h-10 pl-2 placeholder:text-placeholder text-placeholder focus:placeholder:text-opacity-0"
-                  type="text"
-                  placeholder="nombre@correo.com"
+                  type="email"
+                  placeholder="Correo"
+                  name="user_email"
                 />
               </div>
               <div className="flex flex-col">
@@ -54,10 +67,15 @@ const Contact = () => {
                 </label>
                 <textarea
                   className="outline-none h-40 pl-2 placeholder:text-placeholder text-placeholder pt-2 focus:placeholder:text-opacity-0"
-                  placeholder="Hola!!.. Quisiera saber de.. "
+                  placeholder="Mensaje"
+                  name="user_message"
                 />
               </div>
-              <button className="mt-5 text-2xl md:text-3xl  bg-redj w-[100%] py-3 md:py-8 px-2.5">
+              <button
+                className="mt-5 text-2xl md:text-3xl  bg-redj w-[100%] py-3 md:py-8 px-2.5"
+                type="submit"
+                value="Send"
+              >
                 Enviar Correo
               </button>
             </form>

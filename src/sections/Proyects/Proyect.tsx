@@ -6,7 +6,7 @@ export const Proyect = ({
   description,
   image,
   route,
-  stacks,
+  // stacks,
 }: ProyectConfig) => {
   return (
     <div key={id} className="relative borde flex flex-col items-center w-[90%] mr-5 left-52">
