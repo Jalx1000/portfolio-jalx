@@ -1,25 +1,26 @@
-# FROM node:lts-bullseye as build
-# WORKDIR /app
-# COPY package*.json ./
-# RUN npm ci
-# COPY . .
-# RUN npm run build
+FROM node:18-alpine as BUILD_IMAGE
+WORKDIR /app/porfolio
 
-# ##Stage 2
-# FROM nginx:alpine
-# ADD ./config/default.conf /etc/nginx/conf.d/default.conf
-# COPY --from=build /app/dist /var/www/app/
-# EXPOSE 80
-# CMD [ "nginx","-g","daemon off;" ]
+COPY package.json .
 
-FROM node:alpine
-WORKDIR /app
-COPY package.json ./
-COPY package-lock.json ./
-COPY tsconfig.json ./
-COPY tsconfig.node.json ./
-COPY vite.config.ts ./
-COPY ./ ./
-RUN npm i
-EXPOSE 5173
-CMD ["npm", "run", "dev"]
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+FROM node:18-alpine as PRODUCTION_IMAGE
+
+WORKDIR /app/porfolio
+
+
+COPY --from=BUILD_IMAGE /app/porfolio/dist/ /app/porfolio/dist/
+
+EXPOSE 8080
+
+COPY package.json .
+COPY vite.config.ts .
+
+RUN npm install typescript
+EXPOSE 8080
+CMD [ "npm","run","preview" ]

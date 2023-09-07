@@ -1,5 +1,7 @@
 import { ProyectConfig } from "../../type/ProyectType";
 import { motion } from "framer-motion";
+import miau from "../../assets/miau.png";
+import porfolio from "../../assets/primer-porfolio.png";
 
 const Proyects = [
   {
@@ -8,7 +10,7 @@ const Proyects = [
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ",
     image: {
-      src: "src/assets/miau.png",
+      src: `${miau}`,
       alt: "Dashboard",
     },
     route: "https://tailwindcss.com/docs/width",
@@ -25,7 +27,7 @@ const Proyects = [
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 2",
     image: {
-      src: "src/assets/primer-porfolio.png",
+      src: `${porfolio}`,
       alt: "Dashboard",
     },
     route: "https://jalx1000.github.io/JAL.github.io/#portfolio",
