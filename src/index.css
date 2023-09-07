@@ -83,3 +83,15 @@ body {
   flex-wrap: nowrap;
   margin-right: 30px;
 }
+
+.text-only-border {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  outline-offset: 0;
+  /* transition:.5s all ease-in-out; */
+}
+
+.text-only-border:hover {
+  color: white;
+  /* transition:.2s all ease-in-out; */
+}
