@@ -35,7 +35,7 @@ const Proyects = [
   },
   {
     id: 3,
-    title: "Dashboard2",
+    title: "Calculadora",
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 2",
     image: {
@@ -52,7 +52,7 @@ const Proyects = [
   },
   {
     id: 4,
-    title: "Dashboard2",
+    title: "Netflix",
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 2",
     image: {
@@ -69,7 +69,7 @@ const Proyects = [
   },
   {
     id: 5,
-    title: "Dashboard2",
+    title: "Weather App ",
     description:
       "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 2",
     image: {

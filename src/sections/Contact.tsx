@@ -16,7 +16,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="my-36 ">
+    <section id="contact" className="my-36 ">
       <img className="absolute -right-36 -mt-80 -z-30 " src={boxSvg} alt="" />
       <img className="absolute -left-48 pt-60 -z-30" src={boxSvg} alt="" />
       <div className=" flex justify-between w-[90%] m-auto flex-wrap md:flex-nowrap">
