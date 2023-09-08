@@ -1,15 +1,14 @@
 import jal from "../assets/jal.svg";
 import Looper from "../assets/Looper.svg";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [navOpen, SetNavOpen] = useState<boolean>(true);
 
   return (
     <header className="flex justify-between items-center w-screen p-2.5 m-0 z-10">
-      
       <div className="w-11/12 m-auto flex justify-between xl:justify-between">
-      
         <div id="logo" className="">
           <img
             className="h-[120px] md:h-40 xl:h-[100%]"
@@ -39,7 +38,7 @@ const Nav = () => {
 
         <nav
           id="menu"
-          style={{ display: navOpen ? "none" : "flex"}}
+          style={{ display: navOpen ? "none" : "flex" }}
           // className="mt-0  mr-0 flex flex-col items-end gap-4 absolute top-0 right-0 bottom-0 text-center bg-black w-screen pt-4 shadow-sm z-index:10;"
           className="fixed w-screen bg-blackj top-0 left-0 flex h-screen z-40 justify-center items-center"
         >
@@ -48,29 +47,39 @@ const Nav = () => {
             src={Looper}
             alt="looper"
           />
-          <ul className="text-8xl z-50 ml-52">
-            <li className="font-bold uppercase">
-              <a className="text-only-border" href="#">
-                Contribuciones
-              </a>
-            </li>
-            <li className="font-bold uppercase ">
-              <a className="text-only-border" href="#">
-                Acerca de mi
-              </a>
-            </li>
-            <li className="font-bold uppercase ">
-              <a className="text-only-border" href="#">
-                Proyectos
-              </a>
-            </li>
-            <li className="font-bold uppercase ">
-              <a className="text-only-border" href="#contact">
-                Contactame
-              </a>
-            </li>
-          </ul>
-
+          <motion.div
+            className="z-50"
+            initial={{ opacity: 0, scale: 1.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <ul className="text-8xl ml-52">
+              <li className="font-bold uppercase">
+                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#contribuciones">
+                  Contribuciones
+                </a>
+              </li>
+              <li className="font-bold uppercase ">
+                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#about">
+                  Acerca de mi
+                </a>
+              </li>
+              <li className="font-bold uppercase ">
+                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#proyectsList">
+                  Proyectos
+                </a>
+              </li>
+              <li className="font-bold uppercase ">
+                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#contact">
+                  Contactame
+                </a>
+              </li>
+            </ul>
+          </motion.div>
           <button
             onClick={() => SetNavOpen(!navOpen)}
             className="absolute top-0 right-14"
@@ -88,8 +97,6 @@ const Nav = () => {
             </div>
           </button>
         </nav>
-
-
       </div>
     </header>
   );

@@ -2,7 +2,7 @@ import EngagedLogo from "../assets/engaged.svg";
 import CognosLogo from "../assets/cognos.svg";
 const Contribuciones = () => {
   return (
-    <section className=" my-20">
+    <section id="contribuciones" className="py-20">
       <header>
         <h2 className="text-center text-4xl">CONTRIBUCIONES</h2>
         <h4 className="text-center text-[#9C9C9C] text-3xl">

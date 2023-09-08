@@ -88,7 +88,7 @@ const Proyects = [
 
 const ProyectsList = () => {
   return (
-    <section>
+    <section id="proyectsList" className="py-36">
       <article className="">
         <div>
           <p>PROYECTOS</p>

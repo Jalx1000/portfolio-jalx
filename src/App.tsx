@@ -6,6 +6,7 @@ import ProyectsList from "./sections/Proyects/ProyectsList";
 import TextSlide from "./sections/TextSlide";
 import Nav from "./sections/Nav";
 import Hero from "./sections/Hero";
+import Slide from './sections/Slide';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <Contribuciones />
       <TextSlide />
+      <Slide/>
       <ProyectsList />
       <Contact />
       <Footer />
@@ -23,3 +25,5 @@ function App() {
 }
 
 export default App;
+
+
