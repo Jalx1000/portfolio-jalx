@@ -2,20 +2,22 @@ import "./App.css";
 import Footer from "./sections/Footer";
 import Contact from "./sections/Contact";
 import Contribuciones from "./sections/contribuciones";
-import ProyectsList from "./sections/Proyects/ProyectsList";
 import TextSlide from "./sections/TextSlide";
-import Nav2 from "./sections/Nav2";
+import Nav from "./sections/Nav";
 import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
 
 function App() {
 
   return (
     <>
-      <Nav2 />
+      <Nav />
       <Hero />
       <Contribuciones />
       <TextSlide />
-      <ProyectsList />
+      <About/>
+      <Skills/>
       <Contact />
       <Footer />
     </>
@@ -23,3 +25,5 @@ function App() {
 }
 
 export default App;
+
+

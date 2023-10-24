@@ -16,7 +16,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="my-36 ">
+    <section id="contact" className="py-36 ">
       <img className="absolute -right-36 -mt-80 -z-30 " src={boxSvg} alt="" />
       <img className="absolute -left-48 pt-60 -z-30" src={boxSvg} alt="" />
       <div className=" flex justify-between w-[90%] m-auto flex-wrap md:flex-nowrap">
@@ -72,7 +72,8 @@ const Contact = () => {
                 />
               </div>
               <button
-                className="mt-5 text-2xl md:text-3xl  bg-redj w-[100%] py-3 md:py-8 px-2.5"
+                className="mt-5 text-2xl md:text-3xl  bg-[#FF2323] hover:bg-redj focus:bg-[#D70000]  w-[100%] py-3 md:py-8 px-2.5"
+                // onClick={()=>alert("hola")}
                 type="submit"
                 value="Send"
               >

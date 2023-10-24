@@ -5,12 +5,15 @@
 @import "tailwindcss/utilities";
 
 /* El resto de tus estilos */
-* {
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   /* -webkit-font-smoothing: antialiased; */
+  background: #000;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -23,11 +26,6 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #cc0000;
-}
-
-body {
-  background: #000;
-  color: white;
 }
 
 .borde {
@@ -61,7 +59,6 @@ body {
   overflow-x: hidden;
   letter-spacing: -2px;
   line-height: 0.8;
-  margin: 0;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
@@ -72,7 +69,6 @@ body {
   text-transform: uppercase;
   font-size: 64px;
   white-space: nowrap;
-  /* display: flex; */
   display: inline-block;
   flex-wrap: nowrap;
 }
@@ -82,4 +78,16 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   margin-right: 30px;
+}
+
+.text-only-border {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  outline-offset: 0;
+  /* transition:.5s all ease-in-out; */
+}
+
+.text-only-border:hover {
+  color: white;
+  /* transition:.2s all ease-in-out; */
 }

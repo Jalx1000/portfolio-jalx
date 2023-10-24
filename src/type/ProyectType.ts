@@ -16,3 +16,8 @@ export interface ProyectConfig {
   route: string;
   stacks: StacksConfig[];
 }
+
+export interface ParallaxProps {
+  children: string;
+  baseVelocity: number;
+}
