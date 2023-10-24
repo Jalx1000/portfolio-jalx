@@ -5,7 +5,7 @@ import bootstrap from "../assets/bootstrap.png";
 import javascript from "../assets/javascript.png";
 import typescript from "../assets/typescript.png";
 import reactjs from "../assets/reactjs.png";
-import git from "../assets/git.png";
+import git from "../assets/git2.png";
 import github from "../assets/github.png";
 import docker from "../assets/docker.png";
 import rtk from "../assets/rtk.png";
