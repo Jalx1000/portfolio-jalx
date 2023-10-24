@@ -21,7 +21,7 @@ const Hero = () => {
       <section className="">
         <div className="absolute flex flex-col left-32 top-[26rem]">
           <h1 className="xl:text-[10rem] xl:h-[200px] line-clamp-1 -ml-2">
-            FULL<span className="text-redj">STACK</span>
+            <span className="hidden">Porfolio del desarrollador</span>FULL<span className="text-redj">STACK</span><span className="hidden">de Javier Alejandro Mogro Peñafiel</span>
           </h1>
           <ul className="flex text-2xl underline">
             <li className="mr-10">
@@ -47,10 +47,10 @@ const Hero = () => {
 
         <div className="absolute flex items-center bottom-16 left-32">
           <img src={arrow} alt="" />
-          <p className="ml-8 text-3xl w-7/12">
+          <h3 className="ml-8 text-3xl w-7/12">
             HOLA, SOY JAVIER MOGRO, GUSTO EN CONOCERTE, BIENVENIDO A MI
             PORTAFOLIO
-          </p>
+          </h3>
         </div>
       </section>
     </div>
