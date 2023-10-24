@@ -39,8 +39,9 @@ const Nav = () => {
         <nav
           id="menu"
           style={{ display: navOpen ? "none" : "flex" }}
-          // className="mt-0  mr-0 flex flex-col items-end gap-4 absolute top-0 right-0 bottom-0 text-center bg-black w-screen pt-4 shadow-sm z-index:10;"
-          className="fixed w-screen bg-blackj top-0 left-0 flex h-screen z-40 justify-center items-center"
+          className={`fixed w-screen  top-0 left-0 flex h-screen z-40 justify-center items-center transition-all ease-in-out duration-0.8 ${
+            navOpen ? "bg-white" : "bg-blackj"
+          }`}
         >
           <img
             className="absolute bottom-0 left-0 h-full"
@@ -49,32 +50,51 @@ const Nav = () => {
           />
           <motion.div
             className="z-50"
-            initial={{ opacity: 0, scale: 1.7 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 1 }}
+            animate={
+              navOpen ? { opacity: 0, scale: 1.1 } : { opacity: 1, scale: 1 }
+            }
             transition={{
               duration: 0.8,
-              delay: 0.5,
+              // delay: 2,
+              when: "afterChildren",
               ease: [0, 0.71, 0.2, 1.01],
             }}
           >
             <ul className="text-8xl ml-52">
               <li className="font-bold uppercase">
-                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#contribuciones">
+                <a
+                  onClick={() => SetNavOpen(!navOpen)}
+                  className="text-only-border"
+                  href="#contribuciones"
+                >
                   Contribuciones
                 </a>
               </li>
               <li className="font-bold uppercase ">
-                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#about">
+                <a
+                  onClick={() => SetNavOpen(!navOpen)}
+                  className="text-only-border"
+                  href="#about"
+                >
                   Acerca de mi
                 </a>
               </li>
               <li className="font-bold uppercase ">
-                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#proyectsList">
+                <a
+                  onClick={() => SetNavOpen(!navOpen)}
+                  className="text-only-border"
+                  href="#proyectsList"
+                >
                   Proyectos
                 </a>
               </li>
               <li className="font-bold uppercase ">
-                <a onClick={()=>SetNavOpen(!navOpen)} className="text-only-border" href="#contact">
+                <a
+                  onClick={() => SetNavOpen(!navOpen)}
+                  className="text-only-border"
+                  href="#contact"
+                >
                   Contactame
                 </a>
               </li>

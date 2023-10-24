@@ -21,7 +21,7 @@ const Hero = () => {
       <section className="">
         <div className="absolute flex flex-col left-32 top-[26rem]">
           <h1 className="xl:text-[10rem] xl:h-[200px] line-clamp-1 -ml-2">
-            FRONT<span className="text-redj">END</span>
+            FULL<span className="text-redj">STACK</span>
           </h1>
           <ul className="flex text-2xl underline">
             <li className="mr-10">

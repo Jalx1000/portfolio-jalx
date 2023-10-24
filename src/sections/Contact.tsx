@@ -72,7 +72,8 @@ const Contact = () => {
                 />
               </div>
               <button
-                className="mt-5 text-2xl md:text-3xl  bg-redj w-[100%] py-3 md:py-8 px-2.5"
+                className="mt-5 text-2xl md:text-3xl  bg-[#FF2323] hover:bg-redj focus:bg-[#D70000]  w-[100%] py-3 md:py-8 px-2.5"
+                // onClick={()=>alert("hola")}
                 type="submit"
                 value="Send"
               >

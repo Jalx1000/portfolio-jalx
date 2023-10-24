@@ -7,6 +7,8 @@ import TextSlide from "./sections/TextSlide";
 import Nav from "./sections/Nav";
 import Hero from "./sections/Hero";
 import Slide from './sections/Slide';
+import About from "./sections/About";
+import Skills from "./sections/Skills";
 
 function App() {
 
@@ -16,8 +18,10 @@ function App() {
       <Hero />
       <Contribuciones />
       <TextSlide />
-      <Slide/>
-      <ProyectsList />
+      {/* <Slide/> */}
+      <About/>
+      {/* <ProyectsList /> */}
+      <Skills/>
       <Contact />
       <Footer />
     </>
