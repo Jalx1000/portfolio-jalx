@@ -20,7 +20,7 @@ const Nav = () => {
         <button
           onClick={() => SetNavOpen(!navOpen)}
           style={{ display: navOpen ? "flex" : "none" }}
-          className=""
+          className="fixed z-10 top-2 right-[3.1rem]"
           id="open"
         >
           <div className="w-[71px] h-[120px] md:w-[91px] md:h-[150px] bg-white">
@@ -102,7 +102,7 @@ const Nav = () => {
           </motion.div>
           <button
             onClick={() => SetNavOpen(!navOpen)}
-            className="absolute top-0 right-14"
+            className="absolute top-2 right-14"
             id="close"
           >
             <div className="w-[91px] h-[150px] bg-white">
