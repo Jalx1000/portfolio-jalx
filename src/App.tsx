@@ -7,6 +7,7 @@ import Nav from "./sections/Nav";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
+import Proyects from "./sections/Proyects";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <TextSlide />
       <About/>
       <Skills/>
+      <Proyects/>
       <Contact />
       <Footer />
     </>

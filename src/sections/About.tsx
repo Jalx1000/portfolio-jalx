@@ -22,7 +22,7 @@ function About() {
             <a className="text-2xl" href={cv} download>DESCARGAR <span className="text-redj">CV</span></a>
           </button>
         </div>
-        <div className="w-1/2 flex justify-center items-center">
+        <div className="w-1/2 flex justify-center -z-10 items-center">
           <img
             className="w-[90%] -scale-x-90 select-none"
             src={professor}

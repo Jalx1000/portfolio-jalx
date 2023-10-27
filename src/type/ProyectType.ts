@@ -116,11 +116,27 @@ export const stacks = [
   },
 ];
 
+
+
 export const proyects = [
   {
     name: "dashboard mern",
-    stacks: {
-      url: reactjs
-    } 
+    url: "",
+    stacks: [stacks[3],stacks[5],stacks[6],stacks[7],stacks[8],stacks[11]] 
+  },
+  {
+    name: "weather app",
+    url: "https://jalx1000.github.io/weatherApp-react-vite/",
+    stacks: [stacks[1],stacks[3],stacks[5],stacks[7]] 
+  },
+  {
+    name: "rick and morty",
+    url: "https://jalx1000.github.io/vite-rick-and-morty/",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Web Task",
+    url: "https://jalx1000.github.io/vite-app-tasks-deploy-example/",
+    stacks: [stacks[7],stacks[3]] 
   },
 ];
