@@ -84,7 +84,7 @@ const Nav = () => {
                 <a
                   onClick={() => SetNavOpen(!navOpen)}
                   className="text-only-border"
-                  href="#proyectsList"
+                  href="#proyects"
                 >
                   Proyectos
                 </a>
