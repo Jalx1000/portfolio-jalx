@@ -20,7 +20,7 @@ const Proyects = () => {
           >
             <header className="flex justify-between">
               <div className="mb-10">
-                <h4 className="text-2xl">{proyecto.name}</h4>
+                <h4 className="text-2xl uppercase">{proyecto.name}</h4>
                 <div className="flex mt-2">
                   {proyecto.stacks.map((icons, index) => (
                     <img
