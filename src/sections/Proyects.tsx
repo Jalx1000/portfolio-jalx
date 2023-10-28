@@ -1,4 +1,5 @@
 import { proyects } from "../type/ProyectType";
+import soon from "../assets/soon.png";
 
 const Proyects = () => {
   const anhio = new Date();
@@ -11,7 +12,7 @@ const Proyects = () => {
         </h4>
       </header>
 
-      <article className="flex justify-between flex-wrap">
+      <article className="flex justify-between items-center flex-wrap">
         {proyects.map((proyecto, index) => (
           <div
             key={index}
@@ -33,7 +34,14 @@ const Proyects = () => {
               </div>
               <p className="text-7xl">{index <= 10 ? "0" + index : index}</p>
             </header>
-            <iframe className="w-full h-[370px] bg-white" src={proyecto.url} />
+            {proyecto.url != "" ? (
+              <iframe
+                className="w-full h-[370px] bg-white"
+                src={proyecto.url}
+              />
+            ) : (
+              <img className="w-full h-[370px] bg-white" src={soon} />
+            )}
           </div>
         ))}
       </article>
