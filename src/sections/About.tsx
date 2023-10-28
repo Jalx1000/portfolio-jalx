@@ -10,7 +10,7 @@ function About() {
       </p>
       <article className="flex items-center justify-center m-auto ml-20 ">
         <div className="w-1/2 ">
-          <h2 className="text-8xl"><span className="text-redj">J</span>VIER<br /><span className="text-redj">AL</span>EJANDRO</h2>
+          <h2 className="text-8xl"><span className="text-redj">J</span>AVIER<br /><span className="text-redj">AL</span>EJANDRO</h2>
           <p className="text-xl mt-10">
             Soy un apasionado aspirante a desarrollador full stack con
             experiencia sólida en el ámbito del front-end. Mi fascinación por la
@@ -22,7 +22,7 @@ function About() {
             <a className="text-2xl" href={cv} download>DESCARGAR <span className="text-redj">CV</span></a>
           </button>
         </div>
-        <div className="w-1/2 flex justify-center items-center">
+        <div className="w-1/2 flex justify-center -z-10 items-center">
           <img
             className="w-[90%] -scale-x-90 select-none"
             src={professor}

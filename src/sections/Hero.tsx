@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
 
         <div className="absolute flex items-center bottom-16 left-32">
-          <img src={arrow} alt="" />
+          <img className="select-none" src={arrow} alt="" />
           <h3 className="ml-8 text-3xl w-7/12">
             HOLA, SOY JAVIER MOGRO, GUSTO EN CONOCERTE, BIENVENIDO A MI
             PORTAFOLIO
