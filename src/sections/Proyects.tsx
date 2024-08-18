@@ -1,5 +1,5 @@
 import { proyects } from "../type/ProyectType";
-import soon from "../assets/soon.png";
+import soon from "../assets/proyects/soon.webp";
 
 const Proyects = () => {
   const anhio = new Date();
@@ -12,7 +12,7 @@ const Proyects = () => {
         </h4>
       </header>
 
-      <article className="flex justify-between items-center flex-wrap">
+      <article className="flex justify-center sm:justify-between items-center flex-wrap">
         {proyects.map((proyecto, index) => (
           <div
             key={index}

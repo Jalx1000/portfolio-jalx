@@ -20,15 +20,15 @@ const Contact = () => {
       <img className="absolute -right-36 -mt-80 -z-30 " src={boxSvg} alt="" />
       <img className="absolute -left-48 pt-60 -z-30" src={boxSvg} alt="" />
       <div className=" flex justify-between w-[90%] m-auto flex-wrap md:flex-nowrap">
-        <div className="w-[100%] md:w-[10%]">
+        <div className="hidden md:block xl:w-[100%] md:w-[10%]">
           <h2 className="subtitle text-white  hidden absolute left-3 sm:block md:mt-36 md:text-4xl xl:left-10 xl:text-4x xl:mt-16">
             CONTACTAME
           </h2>
         </div>
 
-        <div className="xl:flex ">
+        <div className="xl:flex">
           <div className="m-auto">
-            <h3 className="overflow-hidden text-4xl md:text-6xl xl:w-[80%] ">
+            <h3 className="overflow-hidden text-4xl md:text-7xl xl:text-8xl xl:w-[90%]">
               <span className="text-redj">¿</span>LISTO PARA TRABAJAR JUNTOS
               <span className="text-redj">?</span>
             </h3>
@@ -37,7 +37,7 @@ const Contact = () => {
             </h4>
           </div>
 
-          <article className="m-auto md:m-0 w-[100%] xl:w-[449px] mt-5">
+          <article className="m-auto md:m-0 w-[100%] xl:w-[45rem] 2xl:w-[50rem] mt-5">
             <form onSubmit={sendEmail}>
               <div className="flex flex-col">
                 <label className="text-2xl md:text-4xl " htmlFor="">
@@ -72,7 +72,7 @@ const Contact = () => {
                 />
               </div>
               <button
-                className="mt-5 text-2xl md:text-3xl  bg-[#FF2323] hover:bg-redj focus:bg-[#D70000]  w-[100%] py-3 md:py-8 px-2.5"
+                className="transition ease-in-out duration-300 mt-5 text-2xl md:text-3xl  bg-[#FF2323] hover:bg-[#7e1111] focus:bg-[#a54242]  w-[100%] py-3 md:py-8 px-2.5"
                 // onClick={()=>alert("hola")}
                 type="submit"
                 value="Send"

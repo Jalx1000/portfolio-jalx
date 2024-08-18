@@ -1,5 +1,5 @@
-import jal from "../assets/jal.svg";
-import Looper from "../assets/Looper.svg";
+import jal from "../assets/hero/jal.svg";
+import Looper from "../assets/nav/Looper.svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
