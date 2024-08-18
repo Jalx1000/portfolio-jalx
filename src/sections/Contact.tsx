@@ -72,7 +72,7 @@ const Contact = () => {
                 />
               </div>
               <button
-                className="mt-5 text-2xl md:text-3xl  bg-[#FF2323] hover:bg-redj focus:bg-[#D70000]  w-[100%] py-3 md:py-8 px-2.5"
+                className="transition ease-in-out duration-300 mt-5 text-2xl md:text-3xl  bg-[#FF2323] hover:bg-[#7e1111] focus:bg-[#a54242]  w-[100%] py-3 md:py-8 px-2.5"
                 // onClick={()=>alert("hola")}
                 type="submit"
                 value="Send"
