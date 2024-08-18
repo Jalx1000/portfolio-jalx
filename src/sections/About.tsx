@@ -1,4 +1,4 @@
-import professor from "../assets/professor.png";
+import professor from "../assets/about/professor.webp";
 import cv from "../Javier Alejandro Mogro Peñafiel .pdf";
 function About() {
   return (
@@ -10,7 +10,7 @@ function About() {
       </p>
       <article className="flex items-center justify-center m-auto ml-20 ">
         <div className="w-1/2 ">
-          <h2 className="text-8xl"><span className="text-redj">J</span>AVIER<br /><span className="text-redj">AL</span>EJANDRO</h2>
+          <h2 className="text-7xl"><span className="text-redj">J</span>AVIER<br /><span className="text-redj">AL</span>EJANDRO</h2>
           <p className="text-xl mt-10">
             Soy un apasionado aspirante a desarrollador full stack con
             experiencia sólida en el ámbito del front-end. Mi fascinación por la
@@ -19,10 +19,10 @@ function About() {
             de experiencias atractivas y funcionales para los usuarios.
           </p>
           <button className="mt-10 hover:text-redj">
-            <a className="text-2xl" href={cv} download>DESCARGAR <span className="text-redj">CV</span></a>
+            <a className="text-2xl" href={cv} target="_blank">DESCARGAR <span className="text-redj">CV</span></a>
           </button>
         </div>
-        <div className="w-1/2 flex justify-center -z-10 items-center">
+        <div className="w-1/2 flex justify-center -z-10 items-center md:w-4/5">
           <img
             className="w-[90%] -scale-x-90 select-none"
             src={professor}
