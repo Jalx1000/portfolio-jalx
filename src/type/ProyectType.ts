@@ -139,4 +139,54 @@ export const proyects = [
     url: "https://jalx1000.github.io/vite-app-tasks-deploy-example/",
     stacks: [stacks[7],stacks[3]] 
   },
+  {
+    name: "Wibel",
+    url: "https://Wibel.net",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Tecbel",
+    url: "https://Tecbel.net",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Agrocas",
+    url: "https://Agrocas.net",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Academia",
+    url: "https://academia.wibel.net/",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Labeltech",
+    url: "https://www.labeltech.com.bo/",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Cygenlabs",
+    url: "https://www.cygenlabs.com.bo/",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "MisCuentas - Modules",
+    url: "https://web.miscuentas.com.bo/modules",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "MisCuentas - SitioWeb",
+    url: "https://miscuentas.com.bo/",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Pagosnet - SitioWeb",
+    url: "https://pagosnet.com.bo/",
+    stacks: [stacks[7]] 
+  },
+  {
+    name: "Generador de certificados",
+    url: "https://github.com/Jalx1000/Certificados-din-micos",
+    stacks: [stacks[7]] 
+  },
 ];

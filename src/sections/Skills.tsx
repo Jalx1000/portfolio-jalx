@@ -10,7 +10,7 @@ const Habilidades = () => {
           Las tecnologías que componen mi conjunto de herramientas
         </h4>
       </header>
-      <div className="flex justify-center items-center flex-wrap py-[50px] px-[30px]">
+      <div className="flex justify-center items-center flex-wrap py-[50px] gap-x-[30px]">
       {stacks.map((stack, index) => (
           <img key={index} className="select-none mx-12 my-5 xl:w-20 md:w-20" src={stack.url} alt={stack.name} />
       ))}

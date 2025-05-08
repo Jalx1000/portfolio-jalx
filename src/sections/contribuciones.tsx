@@ -4,6 +4,9 @@ import BelcasLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-belcas
 import TecbelLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-tecbel.svg";
 import PagosnetLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-pagosnet.svg";
 import MiscuetnasLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-miscuentas.svg";
+import LabeltechLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-labeltech.svg";
+import WibelLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-wibel.svg";
+
 const Contribuciones = () => {
   return (
     <section id="contribuciones" className="py-20 mb-20">
@@ -13,7 +16,7 @@ const Contribuciones = () => {
           Empresas en las que colabore
         </h4>
       </header>
-      <div className="flex justify-center py-[50px] px-[30px]">
+      <div className="flex justify-center py-[50px] gap-x-[30px] flex-wrap">
         <img
           className="sm:mr-[25px] select-none"
           src={EngagedLogo}
@@ -41,8 +44,13 @@ const Contribuciones = () => {
         />
         <img
           className="sm:ml-[25px] select-none"
-          src={MiscuetnasLogo}
-          alt="Tecbel"
+          src={WibelLogo}
+          alt="Wibel"
+        />
+        <img
+          className="sm:ml-[25px] select-none"
+          src={LabeltechLogo}
+          alt="Labeltech"
         />
       </div>
     </section>
