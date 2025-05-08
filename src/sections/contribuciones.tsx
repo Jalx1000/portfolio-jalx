@@ -3,7 +3,7 @@ import CognosLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-cognos
 import BelcasLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-belcas.svg";
 import TecbelLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-tecbel.svg";
 import PagosnetLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-pagosnet.svg";
-import MiscuetnasLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-miscuentas.svg";
+import MiscuentasLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-miscuentas.svg";
 import LabeltechLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-labeltech.svg";
 import WibelLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-wibel.svg";
 
@@ -41,6 +41,11 @@ const Contribuciones = () => {
           className="sm:ml-[25px] select-none"
           src={PagosnetLogo}
           alt="Tecbel"
+        />
+        <img
+          className="sm:ml-[25px] select-none"
+          src={MiscuentasLogo}
+          alt="Miscuentas"
         />
         <img
           className="sm:ml-[25px] select-none"
