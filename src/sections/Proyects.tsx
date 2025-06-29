@@ -37,12 +37,12 @@ const Proyects = () => {
             </header>
             {project.url != "" ? (
               <div
-                className="relative w-full h-[370px]"
+                className="relative w-full h-[370px] opacity-50"
                 onClick={() => window.open(project.url, "_blank")}
               >
                 <iframe className="w-full h-full bg-white" src={project.url} />
                 <div className="absolute bottom-2 right-2 z-10">
-                  <button className="bg-black text-white px-4 py-1 rounded shadow bg-radial-[at_25%_25%] from-white to-zinc-900 to-75%">
+                  <button className="bg-black bg-placeholder text-white px-4 py-1 rounded bg-radial-[at_25%_25%] from-white to-zinc-900 to-75%">
                     Ver en nueva pestaña
                   </button>
                 </div>
