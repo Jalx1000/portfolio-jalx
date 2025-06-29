@@ -1,22 +1,3 @@
-import html from "../assets/skills/html.webp";
-import css from "../assets/skills/css.webp";
-import taildwind from "../assets/skills/taildwind.webp";
-import bootstrap from "../assets/skills/bootstrap.webp";
-import javascript from "../assets/skills/javascript.webp";
-import typescript from "../assets/skills/typescript.webp";
-import reactjs from "../assets/skills/reactjs.webp";
-import git from "../assets/skills/git2.webp";
-import github from "../assets/skills/github.webp";
-import docker from "../assets/skills/docker.webp";
-import rtk from "../assets/skills/rtk.webp";
-import framer from "../assets/skills/framer.webp";
-import figma from "../assets/skills/figma.webp";
-import django from "../assets/skills/django.webp";
-import drf from "../assets/skills/drf.webp";
-import mysql from "../assets/skills/mysql.webp";
-import php from "../assets/skills/php.webp";
-import jquery from "../assets/skills/jquery.webp";
-
 interface StacksConfig {
   name: string;
   version?: string;
@@ -41,152 +22,122 @@ export interface ParallaxProps {
   baseVelocity: number;
 }
 
-export const stacks = [
-  {
-    name: "html",
-    url: html,
-  },
-  {
-    name: "css",
-    url: css,
-  },
-  {
-    name: "taildwind",
-    url: taildwind,
-  },
-  {
-    name: "bootstrap",
-    url: bootstrap,
-  },
-  {
-    name: "javascript",
-    url: javascript,
-  },
-  {
-    name: "typescript",
-    url: typescript,
-  },
-  {
-    name: "reactjs",
-    url: reactjs,
-  },
-  {
-    name: "git",
-    url: git,
-  },
-  {
-    name: "github",
-    url: github,
-  },
-  {
-    name: "docker",
-    url: docker,
-  },
-  {
-    name: "rtk",
-    url: rtk,
-  },
-  {
-    name: "framer",
-    url: framer,
-  },
-  {
-    name: "figma",
-    url: figma,
-  },
-  {
-    name: "django",
-    url: django,
-  },
-  {
-    name: "drf",
-    url: drf,
-  },
-  {
-    name: "mysql",
-    url: mysql,
-  },
-  {
-    name: "php",
-    url: php,
-  },
-  {
-    name: "jquery",
-    url: jquery,
-  },
-];
+enum Stack {
+  HTML = "html",
+  CSS = "css",
+  TAILWIND = "taildwind",
+  BOOTSTRAP = "bootstrap",
+  JAVASCRIPT = "javascript",
+  TYPESCRIPT = "typescript",
+  REACTJS = "reactjs",
+  GIT = "git",
+  GITHUB = "github",
+  DOCKER = "docker",
+  DOCKER_COMPOSE = "docker compose",
+  RTK = "rtk",
+  FRAMER = "framer",
+  FIGMA = "figma",
+  DJANGO = "django",
+  DRF = "drf",
+  MYSQL = "mysql",
+  PHP = "php",
+  JQUERY = "jquery",
+  UBUNTU_SERVER = "ubuntu server",
+  WORDPRESS = "wordpress",
+  CPANEL = "cpanel",
+  ANGULAR = "angular",
+  PYTHON = "python",
+}
 
+export const stackList = Object.values(Stack).map((name) => ({
+  name,
+  url: `../src/assets/skills/${name}.webp`,
+}));
 
+export interface ProjectDTO {
+  name: string;
+  url: string;
+  stacks: Stack[]; // importante: array de enum Stack
+}
 
-export const proyects = [
-  {
-    name: "dashboard mern",
-    url: "",
-    stacks: [stacks[3],stacks[5],stacks[6],stacks[7],stacks[8],stacks[11]] 
-  },
-  {
-    name: "weather app",
-    url: "https://jalx1000.github.io/weatherApp-react-vite/",
-    stacks: [stacks[1],stacks[3],stacks[5],stacks[7]] 
-  },
-  {
-    name: "rick and morty",
-    url: "https://jalx1000.github.io/vite-rick-and-morty/",
-    stacks: [stacks[7]] 
-  },
-  {
-    name: "Web Task",
-    url: "https://jalx1000.github.io/vite-app-tasks-deploy-example/",
-    stacks: [stacks[7],stacks[3]] 
-  },
+export const projects: ProjectDTO[] = [
   {
     name: "Wibel",
     url: "https://Wibel.net",
-    stacks: [stacks[7]] 
+    stacks: [
+      Stack.WORDPRESS,
+      Stack.PHP,
+      Stack.MYSQL,
+      Stack.UBUNTU_SERVER,
+      Stack.CPANEL,
+    ],
   },
   {
     name: "Tecbel",
     url: "https://Tecbel.net",
-    stacks: [stacks[7]] 
+    stacks: [
+      Stack.WORDPRESS,
+      Stack.PHP,
+      Stack.MYSQL,
+      Stack.UBUNTU_SERVER,
+      Stack.CPANEL,
+    ],
   },
   {
     name: "Agrocas",
-    url: "https://Agrocas.net",
-    stacks: [stacks[7]] 
+    url: "https://agrocas.net",
+    stacks: [
+      Stack.WORDPRESS,
+      Stack.PHP,
+      Stack.MYSQL,
+      Stack.UBUNTU_SERVER,
+      Stack.CPANEL,
+    ],
   },
   {
     name: "Academia",
     url: "https://academia.wibel.net/",
-    stacks: [stacks[7]] 
+    stacks: [
+      Stack.WORDPRESS,
+      Stack.PHP,
+      Stack.MYSQL,
+      Stack.UBUNTU_SERVER,
+      Stack.CPANEL,
+    ],
   },
   {
     name: "Labeltech",
     url: "https://www.labeltech.com.bo/",
-    stacks: [stacks[7]] 
+    stacks: [Stack.WORDPRESS, Stack.PHP, Stack.MYSQL, Stack.UBUNTU_SERVER],
+  },
+  {
+    name: "Optel",
+    url: "https://optel.zuraso.com/",
+    stacks: [Stack.WORDPRESS, Stack.PHP, Stack.MYSQL, Stack.UBUNTU_SERVER],
   },
   {
     name: "Cygenlabs",
     url: "https://www.cygenlabs.com.bo/",
-    stacks: [stacks[7]] 
+    stacks: [Stack.WORDPRESS, Stack.PHP, Stack.MYSQL, Stack.UBUNTU_SERVER],
   },
   {
-    name: "MisCuentas - Modules",
+    name: "MisCuentas - Modulos",
     url: "https://web.miscuentas.com.bo/modules",
-    stacks: [stacks[7]] 
+    stacks: [Stack.FIGMA, Stack.ANGULAR],
   },
   {
-    name: "MisCuentas - SitioWeb",
+    name: "MisCuentas - Sitio Web",
     url: "https://miscuentas.com.bo/",
-    stacks: [stacks[7]] 
+    stacks: [Stack.FIGMA, Stack.ANGULAR],
   },
   {
-    name: "Pagosnet - SitioWeb",
+    name: "Pagosnet - Sitio Web",
     url: "https://pagosnet.com.bo/",
-    stacks: [stacks[7]] 
+    stacks: [Stack.FIGMA, Stack.ANGULAR],
   },
   {
     name: "Generador de certificados",
     url: "https://github.com/Jalx1000/Certificados-din-micos",
-    stacks: [stacks[7]] 
+    stacks: [Stack.PYTHON],
   },
 ];

@@ -23,7 +23,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     clamp: false,
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(-20, 30, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-20, 20, v)}%`);
 
   const directionFactor = useRef<number>(1);
 
@@ -43,8 +43,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   return (
     <div className="parallax">
       <motion.div className="scroller" style={{ x }}>
-        <span className=" bg-redj py-2">{children}</span>
-        {/* <span>{children} </span> */}
+        <span className=" bg-redj tracking-wide font-bold py-4">{children}</span>
       </motion.div>
     </div>
   );
@@ -52,12 +51,12 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 const TextSlide = () => {
   return (
-    <section className="relative h-80">
+    <section className="select-none relative h-80">
       <ParallaxText baseVelocity={-5}>
-        DESARROLLO WEB BRANDING DISEÑO UI DESARROLLO WEB BRANDING DISEÑO UI
+        DESARROLLO WEB | AUTOMATIZACIONES | DISEÑO UI/UX | HOSTING | DESARROLLO WEB | AUTOMATIZACIONES | DISEÑO UI/UX | HOSTING
       </ParallaxText>
       <ParallaxText baseVelocity={5}>
-        DESARROLLO WEB BRANDING DISEÑO UI DESARROLLO WEB BRANDING DISEÑO UI
+      DESARROLLO WEB | AUTOMATIZACIONES | DISEÑO UI/UX | HOSTING | DESARROLLO WEB | AUTOMATIZACIONES | DISEÑO UI/UX | HOSTING
       </ParallaxText>
     </section>
   );

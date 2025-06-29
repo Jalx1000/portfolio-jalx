@@ -1,4 +1,4 @@
-import { proyects } from "../type/ProyectType";
+import { ProjectDTO, projects } from "../type/ProyectType";
 import soon from "../assets/proyects/soon.webp";
 
 const Proyects = () => {
@@ -13,32 +13,31 @@ const Proyects = () => {
       </header>
 
       <article className="flex justify-center sm:justify-between items-center flex-wrap">
-        {proyects.map((proyecto, index) => (
+        {projects.map((project: ProjectDTO, index: number) => (
           <div
             key={index}
             className="bg-[#2E2E2E] px-10 pt-6 pb-12 w-[730px] h-[541px] mb-24"
           >
             <header className="flex justify-between">
               <div className="mb-10">
-                <h4 className="text-2xl uppercase">{proyecto.name}</h4>
+                <h4 className="text-2xl uppercase">{project.name}</h4>
                 <div className="flex mt-2">
-                  {proyecto.stacks.map((icons, index) => (
+                  {project.stacks.map((icon, index) => (
                     <img
                       key={index}
                       className="h-9 mr-3"
-                      src={icons.url}
-                      alt=""
+                      src={`../src/assets/skills/${icon}.webp`}
+                      alt={icon}
+                      title={icon}
                     />
                   ))}
                 </div>
               </div>
               <p className="text-7xl">{index <= 10 ? "0" + index : index}</p>
             </header>
-            {proyecto.url != "" ? (
-              <iframe
-                className="w-full h-[370px] bg-white"
-                src={proyecto.url}
-              />
+            {project.url != "" ? (
+              <iframe className="w-full h-[370px] bg-white" src={project.url} />
+              // <img className="w-full h-[370px] bg-white" src={soon} />
             ) : (
               <img className="w-full h-[370px] bg-white" src={soon} />
             )}

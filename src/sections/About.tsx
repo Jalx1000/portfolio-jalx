@@ -18,8 +18,8 @@ function About() {
             nuevas fronteras en el desarrollo web, con un enfoque en la creación
             de experiencias atractivas y funcionales para los usuarios.
           </p>
-          <button className="mt-10 hover:text-redj">
-            <a className="text-2xl" href={cv} target="_blank">DESCARGAR <span className="text-redj">CV</span></a>
+          <button className="mt-10 bg-redj p-4 px-8 hover:bg-[#7e1111] focus:bg-[#a54242]">
+            <a className="text-2xl" href={cv} target="_blank">DESCARGAR CV</a>
           </button>
         </div>
         <div className="w-1/2 flex justify-center -z-10 items-center md:w-4/5">

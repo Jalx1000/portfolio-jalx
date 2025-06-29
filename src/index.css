@@ -16,6 +16,11 @@ body {
   color: white;
 }
 
+::selection {
+  background-color: #ff0000; /* plomo */
+  color: rgb(255, 255, 255);
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }

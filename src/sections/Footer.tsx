@@ -1,6 +1,7 @@
 // import React from "react";
 
 const Footer = () => {
+  const year = new Date();
   return (
     <footer className="w-100%">
       <article className="pl-3  md:pl-0 w-[90%] md:w-[90%] m-auto flex flex-col-reverse sm:flex-col md:flex-row md:justify-between justify-center border-t-2 border-white pt-[75px] pb-[30px]">
@@ -10,7 +11,7 @@ const Footer = () => {
             EXTRAORDINARIO EN MI TRABAJO DIGITAL
           </p>
           <p className="text-placeholder text-xl md:text-2xl">
-            &copy;JAVIER MOGRO - ALL RIGHTS RESERVED 2023
+            &copy;JAVIER MOGRO - ALL RIGHTS RESERVED {year.getFullYear()}
           </p>
         </div>
         <ul className="mb-4 md:mb-0 ">
