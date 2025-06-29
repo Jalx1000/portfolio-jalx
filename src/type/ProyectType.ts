@@ -51,7 +51,7 @@ enum Stack {
 
 export const stackList = Object.values(Stack).map((name) => ({
   name,
-  url: `../src/assets/skills/${name}.webp`,
+  url: `/assets/skills/${name}.webp`,
 }));
 
 export interface ProjectDTO {

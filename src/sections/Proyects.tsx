@@ -1,5 +1,5 @@
 import { ProjectDTO, projects } from "../type/ProyectType";
-import soon from "../assets/proyects/soon.webp";
+import soon from "/assets/proyects/soon.webp";
 
 const Proyects = () => {
   const anhio = new Date();
@@ -26,7 +26,7 @@ const Proyects = () => {
                     <img
                       key={index}
                       className="h-9 mr-3"
-                      src={`../src/assets/skills/${icon}.webp`}
+                      src={`/assets/skills/${icon}.webp`}
                       alt={icon}
                       title={icon}
                     />

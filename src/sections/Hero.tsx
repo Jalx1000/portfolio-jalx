@@ -1,6 +1,6 @@
-import topology from "../assets/hero/Topology-4.svg";
-import person from "../assets/hero/person.svg";
-import arrow from "../assets/hero/arrow.svg";
+import topology from "/assets/hero/Topology-4.svg";
+import person from "/assets/hero/person.svg";
+import arrow from "/assets/hero/arrow.svg";
 
 const Hero = () => {
   return (

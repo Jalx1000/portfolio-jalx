@@ -1,4 +1,4 @@
-import boxSvg from "../assets/box.svg";
+import boxSvg from "/assets/box.svg";
 // import emailjs from "@emailjs/browser";
 
 const Contact = () => {

@@ -1,4 +1,4 @@
-import professor from "../assets/about/professor.webp";
+import professor from "/assets/about/professor.webp";
 import cv from "../Javier Alejandro Mogro Peñafiel .pdf";
 function About() {
   return (

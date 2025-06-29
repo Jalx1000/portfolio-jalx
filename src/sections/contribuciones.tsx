@@ -1,11 +1,11 @@
-import EngagedLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-engaged.svg";
-import CognosLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-cognos.svg";
-import BelcasLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-belcas.svg";
-import TecbelLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-tecbel.svg";
-import PagosnetLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-pagosnet.svg";
-import MiscuentasLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-miscuentas.svg";
-import LabeltechLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-labeltech.svg";
-import WibelLogo from "../assets/colaboraciones/jalx-colaboraciones-icon-wibel.svg";
+import EngagedLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-engaged.svg";
+import CognosLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-cognos.svg";
+import BelcasLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-belcas.svg";
+import TecbelLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-tecbel.svg";
+import PagosnetLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-pagosnet.svg";
+import MiscuentasLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-miscuentas.svg";
+import LabeltechLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-labeltech.svg";
+import WibelLogo from "/assets/colaboraciones/jalx-colaboraciones-icon-wibel.svg";
 
 const Contribuciones = () => {
   return (

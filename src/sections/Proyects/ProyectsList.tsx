@@ -1,7 +1,7 @@
 import { ProyectConfig } from "../../type/ProyectType";
 import { motion } from "framer-motion";
-import miau from "../../assets/miau.png";
-import porfolio from "../../assets/primer-porfolio.png";
+import miau from "..//assets/miau.png";
+import porfolio from "..//assets/primer-porfolio.png";
 
 const Proyects = [
   {
