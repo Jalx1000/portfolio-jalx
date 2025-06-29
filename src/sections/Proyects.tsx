@@ -16,7 +16,7 @@ const Proyects = () => {
         {projects.map((project: ProjectDTO, index: number) => (
           <div
             key={index}
-            className="bg-[#2E2E2E] px-10 pt-6 pb-12 w-[730px] h-[541px] mb-24"
+            className="bg-[#2E2E2E] px-10 pt-6 pb-12 w-full md:w-[730px] h-[541px] mb-24"
           >
             <header className="flex justify-between">
               <div className="mb-10">
@@ -37,7 +37,7 @@ const Proyects = () => {
             </header>
             {project.url != "" ? (
               <div
-                className="relative w-full h-[370px] opacity-50"
+                className="relative w-full h-[370px] hover:opacity-50"
                 onClick={() => window.open(project.url, "_blank")}
               >
                 <iframe className="w-full h-full bg-white" src={project.url} />
