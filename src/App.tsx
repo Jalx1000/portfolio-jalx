@@ -13,14 +13,14 @@ function App() {
 
   return (
     <>
-      <Nav />
+      {/* <Nav />
       <Hero />
       <Contribuciones />
       <TextSlide />
       <About/>
       <Skills/>
       <Proyects/>
-      <TextSlide />
+      <TextSlide /> */}
       <Contact />
       <Footer />
     </>

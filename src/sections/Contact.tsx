@@ -2,17 +2,38 @@ import boxSvg from "../assets/box.svg";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        e.currentTarget,
-        import.meta.env.VITE_PUBLIC_KEY
-      )
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
+
+    const form = e.currentTarget;
+
+    try {
+      // const response = await emailjs.sendForm(
+      //   import.meta.env.VITE_SERVICE_ID,
+      //   import.meta.env.VITE_TEMPLATE_ID,
+      //   form,
+      //   import.meta.env.VITE_PUBLIC_KEY
+      // );
+      // 🔥 Webhook a n8n
+      const formData = {
+        name: form.user_name.value,
+        email: form.user_email.value,
+        message: form.user_message.value,
+      };
+
+      await fetch("https://n8n.zuraso.com/webhook/conctacto", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-webhook-token": import.meta.env.VITE_JWT_SECRET,
+        },
+        body: JSON.stringify(formData),
+      });
+
+      alert("Mensaje enviado correctamente");
+    } catch (error) {
+      console.error("Error al enviar", error);
+    }
   };
 
   return (
@@ -48,6 +69,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Nombre"
                   name="user_name"
+                  required
                 />
               </div>
               <div className="flex flex-col my-5">
@@ -59,6 +81,7 @@ const Contact = () => {
                   type="email"
                   placeholder="Correo"
                   name="user_email"
+                  required
                 />
               </div>
               <div className="flex flex-col">
@@ -69,6 +92,7 @@ const Contact = () => {
                   className="outline-none h-40 pl-2 placeholder:text-placeholder text-placeholder pt-2 focus:placeholder:text-opacity-0"
                   placeholder="Mensaje"
                   name="user_message"
+                  required
                 />
               </div>
               <button
@@ -77,7 +101,7 @@ const Contact = () => {
                 type="submit"
                 value="Send"
               >
-                Enviar Correo
+                Enviar Mensaje
               </button>
             </form>
           </article>
