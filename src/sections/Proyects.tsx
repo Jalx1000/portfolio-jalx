@@ -36,9 +36,13 @@ const Proyects = () => {
               <p className="text-7xl">{index <= 10 ? "0" + index : index}</p>
             </header>
             {project.url != "" ? (
-              <iframe className="w-full h-[370px] bg-white" src={project.url} />
-              // <img className="w-full h-[370px] bg-white" src={soon} />
+              <iframe
+                onClick={() => window.open(project.url, "_blank")}
+                className="w-full h-[370px] bg-white hover:opacity-50"
+                src={project.url}
+              />
             ) : (
+              // <img className="w-full h-[370px] bg-white" src={soon} />
               <img className="w-full h-[370px] bg-white" src={soon} />
             )}
           </div>
