@@ -1,5 +1,5 @@
 import boxSvg from "../assets/box.svg";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
