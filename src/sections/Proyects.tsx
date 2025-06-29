@@ -36,18 +36,17 @@ const Proyects = () => {
               <p className="text-7xl">{index <= 10 ? "0" + index : index}</p>
             </header>
             {project.url != "" ? (
-              <div className="relative w-full h-[370px]">
-              <iframe className="w-full h-full bg-white" src={project.url} />
-              <div className="absolute bottom-2 right-2 z-10">
-                <button
-                  onClick={() => window.open(project.url, "_blank")}
-                  className="bg-black text-white px-4 py-1 rounded shadow"
-                >
-                  Ver en nueva pestaña
-                </button>
+              <div
+                className="relative w-full h-[370px]"
+                onClick={() => window.open(project.url, "_blank")}
+              >
+                <iframe className="w-full h-full bg-white" src={project.url} />
+                <div className="absolute bottom-2 right-2 z-10">
+                  <button className="bg-black text-white px-4 py-1 rounded shadow bg-radial-[at_25%_25%] from-white to-zinc-900 to-75%">
+                    Ver en nueva pestaña
+                  </button>
+                </div>
               </div>
-            </div>
-            
             ) : (
               // <img className="w-full h-[370px] bg-white" src={soon} />
               <img className="w-full h-[370px] bg-white" src={soon} />
